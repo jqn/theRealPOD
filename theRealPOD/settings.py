@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': os.environ['RDS_DB_NAME'],
         'USER': os.environ['RDS_USERNAME'],
         'PASSWORD': os.environ['RDS_PASSWORD'],
-        'HOST': 'aa92vvau4pwkvp.cb2dokb1ehu4.us-west-2.rds.amazonaws.com',
-        'PORT': '5432',
+        'HOST': os.environ['RDS_HOSTNAME'],
+        'PORT': os.environ['RDS_PORT'],
     },
 }
 
