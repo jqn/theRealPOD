@@ -11,7 +11,6 @@ def home(request):
 
 def rds_hits(request):
 	context = RequestContext(request)
-	rds_increase()
 	if request.method == 'GET':
 		try:
 			rds_increase()
