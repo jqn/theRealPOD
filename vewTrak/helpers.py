@@ -10,10 +10,7 @@ django.setup()
 
 from vewTrak.models import RelationalHits
 
-def test_rds():
+def rds_increase():
 	hit = RelationalHits.objects.get(id=1)
 	hit.hits = hit.hits + 1
 	hit.save()
-
-if __name__ == '__main__':
-	test_rds()

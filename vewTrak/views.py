@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response
 from vewTrak.models import RelationalHits
 from django.template import RequestContext
-from test_script import test_rds
+from helpers import rds_increase
 
 def home(request):
 	hit_object = RelationalHits.objects.get(id=1)
@@ -10,14 +10,11 @@ def home(request):
 	return render_to_response('vewTrak/index.html', contextDict)
 
 def rds_hits(request):
-	test_rds()		# testing to see if this will work on EB
-	# context = RequestContext(request)
-	# if request.method == 'GET':
-	# 	try:
-	# 		hit = RelationalHits.objects.get(id=1)
-	# 		hit.hits = hit.hits + 1
-	# 		hit.save()
-	# 	except:
-	# 		pass
+	context = RequestContext(request)
+	if request.method == 'GET':
+		try:
+			rds_increase()
+		except:
+			pass
 	return render_to_response('vewTrak/index.html', {})
 
