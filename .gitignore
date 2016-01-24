@@ -2,6 +2,7 @@ env
 *.pyc
 staticfiles
 local_settings.py
+settings.py
 db.sqlite3
 
 # Elastic Beanstalk Files

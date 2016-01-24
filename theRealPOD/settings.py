@@ -77,11 +77,14 @@ WSGI_APPLICATION = 'theRealPOD.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ebdb',
+        'USER': 'wrobe0709',
+        'PASSWORD': '1819Meadow',
+        'HOST': 'aa92vvau4pwkvp.cb2dokb1ehu4.us-west-2.rds.amazonaws.com',
+        'PORT': '5432',
+    },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
