@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-
+try:
+   from secret_settings import *
+except ImportError:
+   pass
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -78,9 +81,9 @@ WSGI_APPLICATION = 'theRealPOD.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ebdb',
-        'USER': 'wrobe0709',
-        'PASSWORD': '1819Meadow',
+        'NAME': DATABASE_NAME
+        'USER': DATABASE_USER
+        'PASSWORD': DATABASE_PASSWORD
         'HOST': 'aa92vvau4pwkvp.cb2dokb1ehu4.us-west-2.rds.amazonaws.com',
         'PORT': '5432',
     },
