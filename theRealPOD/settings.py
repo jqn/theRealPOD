@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'theRealPOD.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DATABASE_NAME
-        'USER': DATABASE_USER
-        'PASSWORD': DATABASE_PASSWORD
+        'NAME': DATABASE_NAME,
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
         'HOST': 'aa92vvau4pwkvp.cb2dokb1ehu4.us-west-2.rds.amazonaws.com',
         'PORT': '5432',
     },
