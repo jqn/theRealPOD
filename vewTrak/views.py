@@ -16,5 +16,5 @@ def rds_hits(request):
 			rds_increase()
 		except:
 			pass
-	return render_to_response('vewTrak/index.html', {})
+	return render_to_response('vewTrak/db.html', {})
 
