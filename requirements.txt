@@ -13,6 +13,7 @@ pathspec==0.3.3
 psycopg2==2.6.1
 python-dateutil==2.4.2
 PyYAML==3.11
+redis==2.10.5
 requests==2.6.2
 six==1.10.0
 texttable==0.8.4
