@@ -1,8 +1,3 @@
-# from django.conf import settings
-# settings.configure()
-# import django
-# django.setup()
-# from vewTrak.models import RelationalHits
 import os
 import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'theRealPOD.settings')
