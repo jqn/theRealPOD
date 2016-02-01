@@ -131,6 +131,7 @@ STATIC_ROOT = os.path.join(
                   ),
                   'static/'
               )
+DYNAMO_ENDPOINT = "dynamodb.us-west-2.amazonaws.com"
 try:
     from local_settings import *
 except ImportError:
