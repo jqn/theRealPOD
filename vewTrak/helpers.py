@@ -4,8 +4,7 @@ import boto3
 import decimal
 from boto3.dynamodb.conditions import Key, Attr
 from vewTrak.models import RelationalHits
-dynamodb = boto3.resource('dynamodb', region_name='us-west-2', endpoint_url="http://localhost:8080")
-view_table = dynamodb.Table('DynamoHits')
+from django.conf import settings
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'theRealPOD.settings')
 django.setup()
 
@@ -15,6 +14,9 @@ def rds_increase():
 	hit.save()
 
 def dynamo_increase():
+	DYNAMO_ENDPOINT = getattr(settings, "DYNAMO_ENDPOINT", None)
+	dynamodb = boto3.resource('dynamodb', region_name='us-west-2', endpoint_url=DYNAMO_ENDPOINT)
+	view_table = dynamodb.Table('DynamoHits')
 	response = view_table.update_item(
 		Key={
 			'id': 1
