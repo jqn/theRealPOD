@@ -4,6 +4,9 @@ staticfiles
 local_settings.py
 secret_settings.py
 db.sqlite3
+.coverage
+dump.rdb
+
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
