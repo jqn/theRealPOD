@@ -1,4 +1,3 @@
-#jenkins: https://blogs.aws.amazon.com/application-management/post/Tx34AXRMYLXG5OT/Building-Continuous-Deployment-on-AWS-with-AWS-CodePipeline-Jenkins-and-AWS-Elas
 from django.shortcuts import render, render_to_response
 from vewTrak.models import RelationalHits
 from django.template import RequestContext
