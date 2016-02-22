@@ -4,10 +4,9 @@ staticfiles
 local_settings.py
 secret_settings.py
 db.sqlite3
-.coverage
-dump.rdb
-theRealPOD/htmlconv
 htmlcov
+dump.rdb
+.coverage
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
