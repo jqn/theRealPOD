@@ -6,7 +6,7 @@ secret_settings.py
 db.sqlite3
 .coverage
 dump.rdb
-htmlconv
+theRealPOD/htmlconv
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
