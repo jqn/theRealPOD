@@ -38,11 +38,3 @@ class NoSQLViewTests(TestCase):
 		self.assertEqual(response.status_code, 200)
 		self.assertTemplateUsed(response, 'vewTrak/nosql.html')
 
-
-
-
-
-
-
-
-		
