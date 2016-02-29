@@ -16,7 +16,7 @@ class HomeViewTests(TestCase):
 	def test_home_view(self):
 		rds_hits = RelationalHits(id=1)
 		rds_hits.save()
-		response = self.client.get('')
+		response = self.client.get('http://carpod.us-west-2.elasticbeanstalk.com')
 		self.assertEqual(response.status_code, 200)
 		self.assertTemplateUsed(response, 'vewTrak/index.html')
 
