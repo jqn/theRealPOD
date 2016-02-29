@@ -12,14 +12,6 @@ class RelationalHitsMethodTests(TestCase):
 		rds_hits.save()
 		self.assertEqual((rds_hits.hits >= 0), True)
 
-class HomeViewTests(TestCase):
-	def test_home_view(self):
-		rds_hits = RelationalHits(id=1)
-		rds_hits.save()
-		response = self.client.get('')
-# 		self.assertEqual(response.status_code, 200)
-# 		self.assertTemplateUsed(response, 'vewTrak/index.html')
-
 class CacheViewTests(TestCase):
 	def test_cache_view(self):
 		response = self.client.get('/cache/')

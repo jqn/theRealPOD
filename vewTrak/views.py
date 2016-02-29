@@ -16,14 +16,6 @@ def home(request):
 	hit_object = RelationalHits.objects.get(id=1)
 	rds_hit_count = hit_object.hits
 	# for dynamo views
-	# DYNAMO_ENDPOINT = getattr(settings, "DYNAMO_ENDPOINT", None)
-	# dynamodb = boto3.resource('dynamodb', region_name='us-west-2', endpoint_url=DYNAMO_ENDPOINT)
-	# table = dynamodb.Table('DynamoHits')
-	# response = table.query(
-	# 	KeyConditionExpression=Key('id').eq(1)
-	# )
-	# for i in response['Items']:
-	# 	nosql_hit_count = i['hits']
 	nosql_hit_count = dynamo_get_value()
 	# pass data to template
 	contextDict = {'rds_hit_count': rds_hit_count, 'cache_hit_count': cache_hit_count, 'nosql_hit_count': nosql_hit_count}
