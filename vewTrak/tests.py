@@ -14,9 +14,9 @@ class RelationalHitsMethodTests(TestCase):
 
 class HomeViewTests(TestCase):
 	def test_home_view(self):
-# 		rds_hits = RelationalHits(id=1)
-# 		rds_hits.save()
-		response = self.client.get('/')
+		rds_hits = RelationalHits(id=1)
+		rds_hits.save()
+# 		response = self.client.get('')
 # 		self.assertEqual(response.status_code, 200)
 # 		self.assertTemplateUsed(response, 'vewTrak/index.html')
 
