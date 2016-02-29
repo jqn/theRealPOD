@@ -26,11 +26,11 @@ class RelationalHitsMethodTests(TestCase):
 # 		self.assertEqual(response.status_code, 200)
 # 		self.assertTemplateUsed(response, 'vewTrak/cache.html')
 
-# class RDSViewTests(TestCase):
-# 	def test_rds_view(self):
-# 		response = self.client.get('/db/')
-# 		self.assertEqual(response.status_code, 200)
-# 		self.assertTemplateUsed(response, 'vewTrak/db.html')
+class RDSViewTests(TestCase):
+	def test_rds_view(self):
+		response = self.client.get('/db/')
+		self.assertEqual(response.status_code, 200)
+		self.assertTemplateUsed(response, 'vewTrak/db.html')
 
 # class NoSQLViewTests(TestCase):
 # 	def test_nosql_view(self):
