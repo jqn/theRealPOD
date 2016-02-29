@@ -16,25 +16,25 @@ class HomeViewTests(TestCase):
 	def test_home_view(self):
 		rds_hits = RelationalHits(id=1)
 		rds_hits.save()
-		response = self.client.get('')
+		response = self.client.get('http://carpod.us-west-2.elasticbeanstalk.com')
 		self.assertEqual(response.status_code, 200)
 		self.assertTemplateUsed(response, 'vewTrak/index.html')
 
-class CacheViewTests(TestCase):
-	def test_cache_view(self):
-		response = self.client.get('/cache/')
-		self.assertEqual(response.status_code, 200)
-		self.assertTemplateUsed(response, 'vewTrak/cache.html')
+# class CacheViewTests(TestCase):
+# 	def test_cache_view(self):
+# 		response = self.client.get('/cache/')
+# 		self.assertEqual(response.status_code, 200)
+# 		self.assertTemplateUsed(response, 'vewTrak/cache.html')
 
-class RDSViewTests(TestCase):
-	def test_rds_view(self):
-		response = self.client.get('/db/')
-		self.assertEqual(response.status_code, 200)
-		self.assertTemplateUsed(response, 'vewTrak/db.html')
+# class RDSViewTests(TestCase):
+# 	def test_rds_view(self):
+# 		response = self.client.get('/db/')
+# 		self.assertEqual(response.status_code, 200)
+# 		self.assertTemplateUsed(response, 'vewTrak/db.html')
 
-class NoSQLViewTests(TestCase):
-	def test_nosql_view(self):
-		response = self.client.get('/dynamo/')
-		self.assertEqual(response.status_code, 200)
-		self.assertTemplateUsed(response, 'vewTrak/nosql.html')
+# class NoSQLViewTests(TestCase):
+# 	def test_nosql_view(self):
+# 		response = self.client.get('/dynamo/')
+# 		self.assertEqual(response.status_code, 200)
+# 		self.assertTemplateUsed(response, 'vewTrak/nosql.html')
 
