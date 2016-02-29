@@ -32,9 +32,9 @@ class RDSViewTests(TestCase):
 		self.assertEqual(response.status_code, 200)
 		self.assertTemplateUsed(response, 'vewTrak/db.html')
 
-# class NoSQLViewTests(TestCase):
-# 	def test_nosql_view(self):
-# 		response = self.client.get('/dynamo/')
-# 		self.assertEqual(response.status_code, 200)
-# 		self.assertTemplateUsed(response, 'vewTrak/nosql.html')
+class NoSQLViewTests(TestCase):
+	def test_nosql_view(self):
+		response = self.client.get('/dynamo/')
+		self.assertEqual(response.status_code, 200)
+		self.assertTemplateUsed(response, 'vewTrak/nosql.html')
 
