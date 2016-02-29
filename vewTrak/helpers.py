@@ -27,3 +27,14 @@ def dynamo_increase():
 		},
 		ReturnValues="UPDATED_NEW"
 	)
+
+def dynamo_get_value():
+	DYNAMO_ENDPOINT = getattr(settings, "DYNAMO_ENDPOINT", None)
+	dynamodb = boto3.resource('dynamodb', region_name='us-west-2', endpoint_url=DYNAMO_ENDPOINT)
+	table = dynamodb.Table('DynamoHits')
+	response = table.query(
+		KeyConditionExpression=Key('id').eq(1)
+	)
+	for i in response['Items']:
+		nosql_hit_count = i['hits']
+	return nosql_hit_count
