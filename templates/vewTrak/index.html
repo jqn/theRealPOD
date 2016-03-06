@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<h1>Welcome to vewTrak</h1>
-<a href="/db/">RDS</a> Hit Count: {{ rds_hit_count }} </br>
-<a href="/cache/">Cache</a> Hit Count: {{ cache_hit_count }} </br>
-<a href="/dynamo/">NoSQL</a> Hit Count: {{ nosql_hit_count }} </br>
-
-
-<br></br>
-<footer>A wrobe0709 project</footer>
-</html>
+{% extends 'vewTrak/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+	RDS Hits: {{ rds_hit_count }} </br>
+	Cache Hits: {{ cache_hit_count }} </br>
+	NoSQL Hits: {{ nosql_hit_count }} </br>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>carPod</title>
+		<link rel="StyleSheet" type="text/css" href="{% static 'css/base.css'%}"/>
+	</head>
+	<body>
+		<h1>carPod</h1>
+		<div id='content'>   
+			<div id='left'>
+				<a href="/db/">RDS</a> </br>
+				<a href="/cache/">Cache</a> </br>
+				<a href="/dynamo/">NoSQL</a> 
+			</div>   
+			<div id='right'>
+				{% block body_block %}{% endblock %}
+			</div>
+	</body>
+</html>
